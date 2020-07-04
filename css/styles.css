@@ -3,7 +3,7 @@
   --title-text-color: #212121;
   --accent-color: #2196F3;
   --secondary-background-color: #F5F4FA;
-  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
+  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 body {
   background-color: #FFFFFF;
@@ -71,7 +71,7 @@ ul {
 .site-nav .link:hover,
 .site-nav .link:focus{
   color: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -79,6 +79,7 @@ ul {
 }
 .site-nav .link{
   position: relative;
+  transition: 1000ms var(--transition-timing-function);
 }
 .site-nav .link.current::after {
 position: absolute;
@@ -104,21 +105,23 @@ background-color: var(--accent-color);
   font-size: 14px;
   line-height: 1.14;
   text-decoration: none;
+  transition: 250ms var(--transition-timing-function);
 }
 .site-contacts .link:hover,
 .site-contacts .link:focus{
   color: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  ;
   
 }
 .site-contacts-icon{
   margin-right: 10px;
   fill: currentColor;
   vertical-align: middle;
+  transition: 250ms var(--transition-timing-function);
 }
 .site-contacts-icon:hover{
   fill: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  /*transition: 250ms var(--transition-timing-function);*/
 }
 /*секция hero*/
 .hero {
@@ -302,6 +305,8 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  transition: 1000ms var(--transition-timing-function);
+  
   /*color: var(--secondary-background-color);*/
  }
 .network .link:hover,
@@ -310,11 +315,11 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  
 }
 .network .link:hover svg{
   fill: #FFFFFF;
-  transition: 250ms var(--transition-timing-function);
+ 
 }
 .link-icon {
   fill: #AFB1B8;
@@ -330,7 +335,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  
+  transition: 250ms var(--transition-timing-function);
 }  
 
 .network {
@@ -577,7 +582,8 @@ margin-bottom: 8px;
 .portfolio-project:hover .portfolio-action,
 .portfolio-project:focus .portfolio-action{
   opacity: 1;
-  transition: 250ms var(--transition-timing-function);
+  transition: 1000ms var(--transition-timing-function);
+  transition-delay: 5s;
   transform: translateY(0%) ;
 
 }
@@ -589,7 +595,8 @@ margin-bottom: 8px;
   overflow: hidden;
   /*opacity: 0;*/
   display: flex;
-  transition: 250ms var(--transition-timing-function);
+  transition: 1000ms var(--transition-timing-function);
+  transition-delay: 5s;
   /*transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
    
