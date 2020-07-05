@@ -3,7 +3,7 @@
   --title-text-color: #212121;
   --accent-color: #2196F3;
   --secondary-background-color: #F5F4FA;
-  --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 body {
   background-color: #FFFFFF;
@@ -72,7 +72,7 @@ ul {
 .site-nav .link:focus{
   color: var(--accent-color);
   outline: none;
-  transition: 250ms var(--transition-timing-function);
+  transition: var(--transition-timing-function);
   
 }
 .site-nav .link.current {
@@ -113,7 +113,7 @@ background-color: var(--accent-color);
 .site-contacts .link:focus{
   color: var(--accent-color);
   outline: none;
-  transition: 250ms var(--transition-timing-function);
+  transition: var(--transition-timing-function);
   ;
   
 }
@@ -125,7 +125,7 @@ background-color: var(--accent-color);
 }
 .site-contacts-icon:hover{
   fill: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  transition: var(--transition-timing-function);
   
 }
 /*секция hero*/
@@ -315,16 +315,20 @@ img {
   /*color: var(--secondary-background-color);*/
  }
 .network .link:hover,
-.footer-link-n:hover{
+.network .link:focus,
+.footer-link-n:hover,
+.footer-link-n:focus{
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  outline: none;
+  transition: var(--transition-timing-function);
 }
-.network .link:hover svg{
+.network .link:hover svg,
+.network .link:focus svg{
   fill: #FFFFFF;
- 
+  transition: var(--transition-timing-function);
 }
 .link-icon {
   fill: #AFB1B8;
@@ -345,7 +349,8 @@ img {
 
 .network {
   display: flex;
-  justify-content: space-evenly;
+  padding: 0 32px;
+  justify-content: space-between;
   }
 .client {
   display: flex;
@@ -368,7 +373,7 @@ img {
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   fill: var(--accent-color);
-  transition: 250ms var(--transition-timing-function);
+  transition: var(--transition-timing-function);
   
 }  
 /*кнопка*/
@@ -516,7 +521,7 @@ margin-bottom: 8px;
   box-shadow:  0px 2px 2px rgba(0, 0, 0, 0.12),
   0px 1px 2px rgba(0, 0, 0, 0.08),
   0px 3px 1px rgba(0, 0, 0, 0.1);
-  transition: 250ms var(--transition-timing-function);
+  transition: var(--transition-timing-function);
 }
   
 .portfolio-button .item:not(:first-child){
@@ -536,7 +541,7 @@ margin-bottom: 8px;
   box-shadow:  1px 4px 6px rgba(0, 0, 0, 0.16),
    0px 4px 4px rgba(0, 0, 0, 0.06),
    0px 1px 1px rgba(0, 0, 0, 0.12);
-   transition: 250ms var(--transition-timing-function);
+   transition: var(--transition-timing-function);
  }
 .portfolio-list-item:nth-child(3n) {
   margin-right: 0px;
@@ -582,8 +587,8 @@ margin-bottom: 8px;
 .portfolio-project:hover .portfolio-action,
 .portfolio-project:focus .portfolio-action{
   opacity: 1;
-  transition: 250ms var(--transition-timing-function);
-  /*transition: 1000ms var(--transition-timing-function);
+  /*transition: var(--transition-timing-function);
+  ransition: 1000ms var(--transition-timing-function);
   transition-delay: 5s;*/
   transform: translateY(0%) ;
 
@@ -594,9 +599,9 @@ margin-bottom: 8px;
   left: 0;
   height: 100%;
   overflow: hidden;
-  opacity: 0;
+  /*opacity: 0;*/
   display: flex;
-  /*transition: 250ms var(--transition-timing-function);*/
+  transition: var(--transition-timing-function);
   
   /*transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
